@@ -74,7 +74,7 @@ Phương án xử lý: Hệ thống tích hợp công nghệ tra cứu thời gi
 
 ### 1. Kiến trúc đội ngũ (Team Architecture)
 Mô hình lựa chọn: Kiến trúc nhúng (embedded architecture). Năng lực trí tuệ nhân tạo được nhúng trực tiếp vào nhóm phát triển sản phẩm.
-Lý do lựa chọn: Với quy mô 3 người, mô hình này loại bỏ rào cản phòng ban, giúp kỹ sư phần mềm và kỹ sư trí tuệ nhân tạo phối hợp trực tiếp trên cùng một hệ thống mã nguồn (codebase).
+Lý do lựa chọn: Mô hình kiến trúc nhúng giúp đội ngũ 3 thành viên xóa bỏ hoàn toàn rào cản chuyển giao công việc giữa nghiên cứu và kỹ thuật phần mềm. Kỹ sư phần mềm toàn năng và kỹ sư trí tuệ nhân tạo có thể cộng tác trực tiếp trên cùng một kho mã nguồn (codebase), đồng bộ hóa cấu trúc dữ liệu và tích hợp nhanh chóng các luồng xử lý đa tác nhân (multi-agent) vào hệ thống lõi. Cách tiếp cận này tối ưu hóa tốc độ thử nghiệm và cho phép xử lý ngay các lỗi tương thích trong chu trình tích hợp liên tục thay vì chịu sự phân mảnh quy trình như mô hình trung tâm xuất sắc (center of excellence).
 
 ### 2. Phân định vai trò (Roles)
 Vai trò cốt lõi (Core roles):
@@ -84,9 +84,9 @@ Vai trò cốt lõi (Core roles):
 Vai trò mở rộng (Extended roles): Cố vấn pháp lý chuyên sâu và kỹ sư bảo mật hệ thống (security engineer) cho giai đoạn mở rộng quy mô (scale).
 
 ### 3. Chiến lược bù đắp năng lực (Priority Resourcing)
-Thẩm định án lệ chuyên sâu: Sử dụng phương án hợp tác (partner) với văn phòng luật sư đối tác để cố vấn định kỳ. Không cần tuyển nhân sự cố định ở giai đoạn sản phẩm khả dụng tối thiểu (MVP).
-Thiết kế hệ thống giao diện (design system): Sử dụng phương án thuê ngoài (outsource). Dự án sẽ thuê chuyên gia thiết kế bộ giao diện chuẩn một lần duy nhất để tối ưu chi phí.
-Tự động hóa hệ thống vận hành học máy (MLOps): Sử dụng phương án tự đào tạo nâng cấp (up-skill). Đội ngũ sẽ tận dụng các công cụ mã nguồn mở và tự trau dồi thay vì tuyển nhân sự mới.
+Thẩm định án lệ chuyên sâu và quy định pháp luật: Chọn phương án hợp tác (partner). Đội ngũ hợp tác với văn phòng luật sư đối tác để nhận cố vấn chuyên môn định kỳ và xây dựng bộ dữ liệu đối chuẩn đáng tin cậy, giúp tối ưu chi phí mà không làm phình bộ máy nhân sự ở giai đoạn sản phẩm khả dụng tối thiểu (MVP).
+Thiết kế hệ thống giao diện trực quan cho việc so sánh văn bản pháp lý: Chọn phương án thuê ngoài (outsource). Đội ngũ thuê ngoài chuyên gia thiết kế trọn gói bộ hệ thống thiết kế (design system) và giao diện so sánh điều khoản (visual diff) theo hợp đồng khoán gọn, đảm bảo trải nghiệm người dùng cao cấp mà không phát sinh chi phí nhân sự cố định dài hạn.
+Tự động hóa vận hành học máy và giám sát chi phí sử dụng mô hình: Chọn phương án thuê ngoài (outsource). Đội ngũ thuê ngoài chuyên gia hạ tầng thiết lập đường ống tích hợp liên tục và triển khai liên tục (CI/CD) cùng bảng điều khiển giám sát hạn ngạch chi phí mã định danh (token monitoring dashboard), sau đó chuyển giao cho kỹ sư nội bộ vận hành để tiết kiệm thời gian phát triển ban đầu.
 
 ### 4. Mục tiêu của đội ngũ (Squad Goal)
 Đội ngũ của chúng tôi sở hữu nền tảng ClauseNest và chịu trách nhiệm đưa bản nguyên mẫu (prototype) từ hiện trạng lên bản sản phẩm khả dụng tối thiểu (MVP) đạt độ chính xác trên 95 phần trăm trong vòng 45 ngày.
@@ -107,5 +107,5 @@ Hành động 30 ngày: Xây dựng bộ kiểm thử chuẩn gồm 30 trường
 
 ### 3. Kế hoạch phát triển 30 ngày (Growth Plan)
 Khắc phục khâu kiểm thử thủ công: Đức phụ trách xây dựng bộ kiểm thử 30 trường hợp tiêu chuẩn và kịch bản đo lường tự động (automated evals). Hạn hoàn thành là ngày 15 tháng 9 năm 2026. Dấu hiệu hoàn thành là tập dữ liệu chuẩn được tạo và hệ thống tự động báo cáo độ chính xác.
-Khắc phục độ trễ tiến độ tích hợp: Đạt phụ trách chuẩn hóa toàn bộ cấu trúc dữ liệu giao tiếp (data contract) bằng chuẩn OpenAPI. Hạn hoàn thành là ngày 5 tháng 9 năm 2026. Dấu hiệu hoàn thành là tài liệu giao diện lập trình ứng dụng (API) được đồng bộ hoàn toàn.
+Khắc phục độ trễ tiến độ tích hợp: Đạt phụ trách chuẩn hóa toàn bộ cấu trúc dữ liệu giao tiếp (data contract) bằng chuẩn OpenAPI kết hợp thư viện Pydantic phiên bản 2 giữa máy chủ lõi và dịch vụ trí tuệ nhân tạo. Hạn hoàn thành là ngày 5 tháng 9 năm 2026. Dấu hiệu hoàn thành là bộ đặc tả giao diện lập trình ứng dụng (API specification) được hợp nhất, các mô hình dữ liệu được tự động sinh đồng bộ và hệ thống vượt qua toàn bộ các bài kiểm thử hợp đồng giao tiếp (contract testing).
 Cải thiện quản trị rủi ro tiến độ: Phong phụ trách thiết lập các buổi họp ngắn hằng ngày (daily standup) và tổng kết định kỳ. Hạn hoàn thành là hằng tuần. Dấu hiệu hoàn thành là bảng công việc (kanban board) được cập nhật liên tục.
