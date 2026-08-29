@@ -3,9 +3,9 @@
 Dự án: ClauseNest
 Mô tả: Nền tảng rà soát và trợ lý hợp đồng pháp lý trí tuệ nhân tạo (AI Legal Assistant)
 Thành viên thực hiện:
-* Kiều Hồng Phong (Product Lead)
-* Đỗ Duy Đức (AI Engineer)
-* Nguyễn Đức Đạt (Fullstack Software Engineer)
+* Kiều Hồng Phong - 2A202601020 (Product Lead)
+* Đỗ Duy Đức - 2A202602019 (AI Engineer)
+* Nguyễn Đức Đạt - 2A202601728 (Fullstack Software Engineer)
 Mục tiêu hiện tại: Đạt chứng nhận sản phẩm khả dụng tối thiểu (MVP) trong vòng 1 đến 3 tháng tới. Triển khai thử nghiệm (pilot) cho 3 phòng pháp chế đối tác. Yêu cầu kỹ thuật đạt độ chính xác rà soát rủi ro pháp lý lớn hơn 92 phần trăm, độ trễ xử lý dưới 3 giây và hỗ trợ tối thiểu 5 loại hợp đồng kinh tế phổ biến.
 
 ## TRANG 1: BẢN ĐỒ CÁC BÊN LIÊN QUAN VÀ CHIẾN LƯỢC (STAKEHOLDER MAP AND STRATEGY)
@@ -20,24 +20,10 @@ Mục tiêu hiện tại: Đạt chứng nhận sản phẩm khả dụng tối 
 
 ### 2. Ma trận các bên liên quan (Stakeholder Matrix)
 
-Vùng đánh giá (Quadrant): Mức độ quan tâm thấp (Low Interest) và Mức độ ảnh hưởng cao (High Influence)
-* Nhóm cản trở (Blocker): Cần giữ hài lòng và giải tỏa triệt để mối lo.
-* Giám đốc công nghệ và quản trị bảo mật: Thái độ hiện tại (stance) là chưa ủng hộ. Khách hàng lo ngại rò rỉ dữ liệu hợp đồng mật khi gọi giao diện lập trình ứng dụng (API).
-* Trưởng ban pháp chế: Thái độ hiện tại (stance) là trung lập. Khách hàng hoài nghi khả năng hiểu luật chuyên sâu của trí tuệ nhân tạo.
-
-Vùng đánh giá (Quadrant): Mức độ quan tâm cao (High Interest) và Mức độ ảnh hưởng cao (High Influence)
-* Nhóm ủng hộ chủ chốt (Champion): Cần hợp tác chặt chẽ.
-* Giảng viên hướng dẫn: Thái độ hiện tại (stance) là ủng hộ. Giảng viên tích cực kết nối và tư vấn giải pháp.
-* Đội ngũ nòng cốt: Thái độ hiện tại (stance) là ủng hộ. Nhóm cam kết hoàn thành mục tiêu.
-
-Vùng đánh giá (Quadrant): Mức độ quan tâm thấp (Low Interest) và Mức độ ảnh hưởng thấp (Low Influence)
-* Nhóm theo dõi (Bystander): Theo dõi định kỳ.
-* Nhà đầu tư (Investor): Thái độ hiện tại (stance) là trung lập. Nhà đầu tư đang quan sát chỉ số phát triển và bản dùng thử (demo).
-
-Vùng đánh giá (Quadrant): Mức độ quan tâm cao (High Interest) và Mức độ ảnh hưởng thấp (Low Influence)
-* Nhóm hỗ trợ (Supporter): Giữ thông tin và liên tục lấy phản hồi (feedback).
-* Chuyên viên kinh doanh: Thái độ hiện tại (stance) là ủng hộ. Nhóm này rất hào hứng vì hệ thống giúp giảm thời gian đọc dò hợp đồng.
-* Luật sư cố vấn chuyên môn: Thái độ hiện tại (stance) là ủng hộ. Chuyên gia sẵn sàng hỗ trợ kiểm tra tập dữ liệu.
+| Phân loại theo vùng đánh giá (Quadrant) | Mức độ quan tâm thấp (Low Interest) | Mức độ quan tâm cao (High Interest) |
+|---|---|---|
+| Mức độ ảnh hưởng cao (High Influence) | Nhóm cản trở (Blocker) cần giữ hài lòng: Giám đốc công nghệ (chưa ủng hộ do lo ngại rò rỉ dữ liệu qua API) và Trưởng ban pháp chế (trung lập do hoài nghi khả năng hiểu luật chuyên sâu). | Nhóm ủng hộ chủ chốt (Champion) cần hợp tác chặt chẽ: Giảng viên hướng dẫn (ủng hộ và tư vấn giải pháp) và Đội ngũ nòng cốt (ủng hộ và cam kết hoàn thành mục tiêu). |
+| Mức độ ảnh hưởng thấp (Low Influence) | Nhóm theo dõi (Bystander) cần theo dõi định kỳ: Nhà đầu tư (trung lập và đang quan sát chỉ số phát triển cùng bản dùng thử). | Nhóm hỗ trợ (Supporter) cần liên tục lấy phản hồi: Chuyên viên kinh doanh (ủng hộ do giảm thời gian đọc dò) và Luật sư cố vấn (ủng hộ và sẵn sàng hỗ trợ kiểm tra dữ liệu). |
 
 ### 3. Chiến lược cho bốn bên liên quan ưu tiên (Priority Stakeholders)
 
@@ -63,12 +49,14 @@ Phương án xử lý: Hệ thống tích hợp công nghệ tra cứu thời gi
 
 ### 3. Ma trận phân quyền (RACI Matrix)
 
-* Chuẩn hóa luồng người dùng (user flow): Phong chịu trách nhiệm cuối cùng (Accountable). Đạt và Đức cần được hỏi ý kiến (Consulted). Giảng viên cần được thông báo (Informed).
-* Thu thập và gán nhãn bộ dữ liệu (dataset): Đức chịu trách nhiệm cuối cùng (Accountable). Đạt là người trực tiếp làm (Responsible). Phong và giảng viên cần được hỏi ý kiến (Consulted).
-* Phát triển hệ thống đa tác nhân (multi-agent): Đức chịu trách nhiệm cuối cùng (Accountable). Đạt là người trực tiếp làm (Responsible). Giảng viên cần được hỏi ý kiến (Consulted). Phong cần được thông báo (Informed).
-* Xây dựng giao diện (frontend) và hệ thống lõi (backend core): Đạt chịu trách nhiệm cuối cùng (Accountable). Đức là người trực tiếp làm (Responsible). Phong cần được hỏi ý kiến (Consulted). Giảng viên cần được thông báo (Informed).
-* Thiết lập hệ thống kiểm thử tự động (automated evals): Đức chịu trách nhiệm cuối cùng (Accountable). Đạt là người trực tiếp làm (Responsible). Phong cần được thông báo (Informed). Giảng viên cần được hỏi ý kiến (Consulted).
-* Vận hành chương trình thử nghiệm (pilot): Phong chịu trách nhiệm cuối cùng (Accountable). Đạt và Đức là người trực tiếp làm (Responsible). Giảng viên cần được hỏi ý kiến (Consulted).
+| Công việc trọng tâm (Tasks) | Quản lý sản phẩm (Phong) | Kỹ sư trí tuệ nhân tạo (Đức) | Kỹ sư phần mềm (Đạt) | Cố vấn và Giảng viên |
+|---|---|---|---|---|
+| Chuẩn hóa luồng người dùng (user flow) | Thực hiện và Chịu trách nhiệm (R và A) | Hỏi ý kiến (Consulted) | Hỏi ý kiến (Consulted) | Thông báo (Informed) |
+| Thu thập và gán nhãn bộ dữ liệu (dataset) | Hỏi ý kiến (Consulted) | Chịu trách nhiệm (Accountable) | Trực tiếp làm (Responsible) | Hỏi ý kiến (Consulted) |
+| Phát triển hệ thống đa tác nhân (multi-agent) | Thông báo (Informed) | Chịu trách nhiệm (Accountable) | Trực tiếp làm (Responsible) | Hỏi ý kiến (Consulted) |
+| Xây dựng giao diện và hệ thống lõi | Hỏi ý kiến (Consulted) | Trực tiếp làm (Responsible) | Chịu trách nhiệm (Accountable) | Thông báo (Informed) |
+| Thiết lập hệ thống kiểm thử tự động | Thông báo (Informed) | Chịu trách nhiệm (Accountable) | Trực tiếp làm (Responsible) | Hỏi ý kiến (Consulted) |
+| Vận hành chương trình thử nghiệm (pilot) | Chịu trách nhiệm (Accountable) | Trực tiếp làm (Responsible) | Trực tiếp làm (Responsible) | Hỏi ý kiến (Consulted) |
 
 ## TRANG 3: THIẾT KẾ ĐỘI NGŨ (AI TEAM DESIGN)
 
